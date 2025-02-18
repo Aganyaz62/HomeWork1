@@ -6,8 +6,7 @@ import java.util.Map;
 class Solution {
     // Verilen bir sayı dizisinde, toplamı hedef sayıya eşit olan iki sayının indekslerini bul.
     public int[] twoSum(int[] sayilar, int hedef) {
-        // Sayıları ve indekslerini saklamak için bir "harita" (map) oluştur.
-        // Bu harita, her sayıya karşılık gelen indeksini tutacak.
+
         Map<Integer, Integer> sayiIndeksleri = new HashMap<>();
 
         // Dizideki her bir sayıyı kontrol et.
