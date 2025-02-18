@@ -1,23 +1,27 @@
 package HomeWork1ForLeetCode;
 
-public class Задание5 {
-    public ListNode rotateRight(ListNode head, int n) {
-        if (head==null||head.next==null) return head;
-        ListNode dummy=new ListNode(0);
-        dummy.next=head;
-        ListNode fast=dummy,slow=dummy;
-
-        int i;
-        for (i=0;fast.next!=null;i++)//Get the total length
-            fast=fast.next;
-
-        for (int j=i-n%i;j>0;j--) //Get the i-n%i th node
-            slow=slow.next;
-
-        fast.next=dummy.next; //Do the rotation
-        dummy.next=slow.next;
-        slow.next=null;
-
-        return dummy.next;
+class Solution {
+    public ListNode rotateRight(ListNode head, int k) {
+        if (head==null){
+            return head;
+        }
+        int length=1;
+        ListNode tail=head;
+        ListNode cur=head;
+        while (tail.next!=null){
+            tail=tail.next;
+            length++;
+        }
+        k=k%length;
+        if (k==0){
+            return head;
+        }
+        for(int i=0;i<length-k-1;i++){
+            cur=cur.next;
+        }
+        ListNode newh=cur.next;
+        cur.next=null;
+        tail.next=head;
+        return newh;
     }
 }

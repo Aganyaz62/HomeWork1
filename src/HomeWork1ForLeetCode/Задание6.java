@@ -1,10 +1,6 @@
+package HomeWork1ForLeetCode;
 
-package HomeWork1;
-
-import java.util.ArrayList;
-import java.util.List;
-
-class Задание5ForJava {
+class Solution {
     public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> ans = new ArrayList<>();
 
@@ -21,14 +17,5 @@ class Задание5ForJava {
         }
         return ans;
     }
-
-    public static void main(String[] args) {
-        Задание5ForJava  solution = new Задание5ForJava();
-        int numRows = 5;
-        List<List<Integer>> result = solution.generate(numRows);
-
-        for (List<Integer> row : result) {
-            System.out.println(row);
-        }
-    }
 }
+

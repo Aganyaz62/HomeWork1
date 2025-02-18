@@ -1,8 +1,8 @@
-package HomeWork1;
+package HomeWork1ForLeetCode;
 
 import java.util.HashMap;
 
-class SolutionLeetCode {
+class Solution {
     public int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> map = new HashMap<>();
 

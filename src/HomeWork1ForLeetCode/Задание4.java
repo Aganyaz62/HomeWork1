@@ -1,6 +1,6 @@
 package HomeWork1ForLeetCode;
 
- class Задание4 {
+ class Solution {
         public int[] plusOne(int[] digits)
         {
             for (int i = digits.length - 1; i >= 0; i--) {
